@@ -1,0 +1,23 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models:/app/models          # serve the model you trained on the host
+    environment:
+      MODEL_DIR: ${MODEL_DIR:-models/log-summarizer-t5}
+      POOL_SIZE: ${POOL_SIZE:-2}
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health_check')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  train:
+    profiles: ["train"]
+    build: .
+    volumes:
+      - ./models:/app/models
+      - ./data:/app/data
+    command: python -m model_forge.summarizer.train --epochs 5

@@ -1,0 +1,21 @@
+[billing] 1 sparsity: dropped 0, kept 7
+[billing] 2 unknown: dropped 0, kept 7
+[billing] 3 name filter: dropped 0, kept 7
+[billing] 4 correlation: dropped 1, kept 6 (e.g. ['avg_monthly_spend'])
+[billing] 5 distribution: dropped 0, kept 6
+[profile] 1 sparsity: dropped 0, kept 6
+[profile] 2 unknown: dropped 0, kept 6
+[profile] 3 name filter: dropped 0, kept 6
+[profile] 4 correlation: dropped 0, kept 6
+[profile] 5 distribution: dropped 0, kept 6
+[services] 1 sparsity: dropped 0, kept 12
+[services] 2 unknown: dropped 0, kept 12
+[services] 3 name filter: dropped 0, kept 12
+[services] 4 correlation: dropped 0, kept 12
+[services] 5 distribution: dropped 0, kept 12
+[profile vs billing] 6 cross-group: dropped 0, kept 6
+[services vs billing] 6 cross-group: dropped 0, kept 12
+[services vs profile] 6 cross-group: dropped 0, kept 12
+[billing] 7 significance: dropped 1, kept 5 (e.g. ['charges_drift'])
+[profile] 7 significance: dropped 1, kept 5 (e.g. ['gender'])
+[services] 7 significance: dropped 1, kept 11 (e.g. ['PhoneService'])

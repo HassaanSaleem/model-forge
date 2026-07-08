@@ -1,0 +1,16 @@
+# environments
+.venv/
+venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# downloaded / trained artifacts (reproducible via the scripts)
+data/telco.csv
+models/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

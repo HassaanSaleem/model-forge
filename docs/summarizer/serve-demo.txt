@@ -1,0 +1,8 @@
+$ curl localhost:8000/health_check
+{"status":"ok","pool_size":2}
+
+$ curl -X POST localhost:8000/summarize -d {"text": "ERROR service=order-api fn=connectDb db_port=5432 code=111 msg=connection refused elapsed_ms=4200"}
+{"summary":"Order-api failed to connect (code 111) because the port 5432 on port 5432 refused the connection."}
+
+$ curl -X POST localhost:8000/batch_summarize (2 logs)
+{"summaries":["search-indexer on node-07 ran out of memory: buildIndex exceeded the 512Mi limit.","Auth-gateway has an expired CRIT certificate (12 days past validity), so the handshake in fetchUpstream was aborted."]}

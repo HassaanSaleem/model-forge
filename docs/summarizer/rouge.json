@@ -1,0 +1,13 @@
+{
+  "eval_pairs": 400,
+  "base": {
+    "rouge1": 0.4591,
+    "rouge2": 0.1834,
+    "rougeLsum": 0.3265
+  },
+  "fine_tuned": {
+    "rouge1": 0.6022,
+    "rouge2": 0.3384,
+    "rougeLsum": 0.4505
+  }
+}

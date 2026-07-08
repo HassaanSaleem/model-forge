@@ -1,0 +1,16 @@
+{
+  "test_size": 1409,
+  "accuracy": 0.7651,
+  "precision": 0.5422,
+  "recall": 0.738,
+  "f1": 0.6251,
+  "roc_auc": 0.8476,
+  "epochs_ran": 13,
+  "best_val_auc": 0.8477,
+  "input_dims": {
+    "billing": 5,
+    "profile": 5,
+    "services": 11
+  },
+  "params": 27009
+}
